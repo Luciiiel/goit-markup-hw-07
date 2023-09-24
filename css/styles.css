@@ -90,10 +90,6 @@ textarea {
   padding: 0 15px;
 }
 
-.hero {
-  padding: 188px 0;
-}
-
 .about {
   padding-bottom: 0;
 }
@@ -178,22 +174,13 @@ textarea {
 
 /* hero section */
 .hero {
+  padding: 188px 0;
   background: var(--GREY, rgba(46, 47, 66, 0.7));
   background-image: url(../images/dark-bg.png), url(../images/hero-img.jpg),
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   background-repeat: no-repeat;
   background-position: center;
-  /* background-blend-mode: darken; */
   background-size: cover;
-}
-
-.hero-container-content {
-  margin: 0 315px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
 }
 
 .hero-heading {
