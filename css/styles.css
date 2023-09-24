@@ -80,18 +80,26 @@ textarea {
   justify-content: space-between;
 }
 
-.hero-container {
-  padding: 188px 0;
+.section {
+  padding: 120px 0;
 }
 
 .container {
   width: 1158px;
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 0 15px;
 }
 
-.about-container {
-  padding-bottom: 0px;
+.hero {
+  padding: 188px 0;
+}
+
+.about {
+  padding-bottom: 0;
+}
+
+.footer {
+  padding: 100px 0;
 }
 
 /* WEBSTUDIO logo link */
@@ -171,10 +179,11 @@ textarea {
 /* hero section */
 .hero {
   background: var(--GREY, rgba(46, 47, 66, 0.7));
-  background-image: url(../images/hero-img.jpg);
+  background-image: url(../images/dark-bg.png), url(../images/hero-img.jpg),
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   background-repeat: no-repeat;
   background-position: center;
-  background-blend-mode: darken;
+  /* background-blend-mode: darken; */
   background-size: cover;
 }
 
@@ -203,8 +212,10 @@ textarea {
   color: var(--white-color);
   background-color: var(--iris-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
   letter-spacing: 0.64px;
   border-radius: 4px;
   border: 0;
