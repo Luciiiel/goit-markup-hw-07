@@ -40,7 +40,13 @@ ul {
 
 a {
   text-decoration: none;
+  font-style: normal;
   color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 input,
@@ -93,10 +99,6 @@ textarea {
   padding-bottom: 0;
 } */
 
-.service {
-  display: none;
-}
-
 .footer {
   padding: 100px 0;
 }
@@ -107,6 +109,14 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    padding: 16px 15px 13.5px 15px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    padding: 24px 15px 21.5px 15px;
+  }
 }
 
 /* WEBSTUDIO logo link */
@@ -131,12 +141,23 @@ textarea {
 .nav-list {
   display: none;
 
-  /* list-style: none;
-  color: var(--navyblue-color);
-  font-weight: 500;
-  line-height: 24px;
-  display: inline-flex;
-  column-gap: 40px; */
+  @media screen and (min-width: 768px) {
+    list-style: none;
+    color: var(--navyblue-color);
+    font-weight: 500;
+    line-height: 24px;
+    display: inline-flex;
+    column-gap: 40px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    list-style: none;
+    color: var(--navyblue-color);
+    font-weight: 500;
+    line-height: 24px;
+    display: inline-flex;
+    column-gap: 40px;
+  }
 }
 
 .nav-link {
@@ -175,16 +196,47 @@ textarea {
 .address-list {
   display: none;
 
-  /* list-style: none;
-  color: var(--slate-color);
-  font-family: "roboto";
-  font-style: normal;
-  display: inline-flex;
-  column-gap: 40px; */
+  @media screen and (min-width: 768px) {
+    color: var(--slate-color);
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    color: var(--slate-color);
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+  }
 }
 
 .address-link:hover {
   color: var(--ocean-color);
+}
+
+/* mobile menu modal */
+.mobile-menu-button {
+  border: 0;
+  background-color: var(--white-color);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu-icon {
+  fill: var(--navyblue-color);
+  width: 32px;
+  height: 22px;
 }
 
 /* hero section */
@@ -193,6 +245,7 @@ textarea {
   background: var(--navyblue-color);
   background-image: url(../images/dark-bg.png), url(../images/hero-img.jpg),
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  background-size: cover;
 
   /* padding: 188px 0;
   background: var(--GREY, rgba(46, 47, 66, 0.7));
@@ -483,30 +536,36 @@ textarea {
 
 /* about section */
 .about-list {
-  list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  row-gap: 72px;
+  gap: 72px;
 
-  /* column-gap: 24px; */
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 1158px) {
+    display: flex;
+    column-gap: 24px;
+    flex-direction: row;
+  }
 }
 
 .about-list-item {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
 }
 .about-item-icon {
   display: none;
-  /* 
+
   @media screen and (min-width: 1158px) {
+    display: flex;
     width: 264px;
     height: 112px;
     padding: 24px 100px;
     background-color: var(--cloud-color);
     border-radius: 4px;
-  } */
+  }
 }
 
 .about-item-heading {
@@ -519,20 +578,34 @@ textarea {
   letter-spacing: 0.72px;
   text-transform: capitalize;
 
-  /* font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.4px; */
+  @media screen and (min-width: 1158px) {
+    text-align: start;
+    margin: 8px 0 8px 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+  }
 }
 
 .about-description {
   color: var(--color-slate);
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.32px;
 }
 
 /* service section */
+.service {
+  display: none;
+
+  @media screen and (min-width: 1158px) {
+    display: flex;
+    padding-top: 0;
+  }
+}
+
 .service-heading {
   text-align: center;
   font-size: 36px;
@@ -568,9 +641,10 @@ textarea {
 .team-list {
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   row-gap: 72px;
+  column-gap: 24px;
   margin-top: 72px;
   justify-content: center;
 }
@@ -657,6 +731,10 @@ textarea {
   justify-content: center;
   column-gap: 24px;
   row-gap: 72px;
+
+  @media screen and (min-width: 1158px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .customer-list-item {
@@ -699,22 +777,42 @@ textarea {
   align-items: center;
   row-gap: 72px;
 
-  column-gap: 120px;
-}
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 24px;
+  }
 
-.footer-info {
-  display: flex;
-  flex-direction: column;
-  row-gap: 17.5px;
+  @media screen and (min-width: 1158px) {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 120px;
+  }
 }
 
 .footer-info-logo {
-  color: var(--cloud-color);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 800;
-  text-transform: uppercase;
   text-align: center;
+  display: block;
+  margin-bottom: 17.5px;
+  /* text */
+  color: var(--cloud-color);
+  font-family: "Raleway";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1158px) {
+    text-align: left;
+  }
 }
 
 .footer-logo-span {
@@ -739,19 +837,31 @@ textarea {
 }
 
 .footer-socmed {
-  display: flex;
-  flex-direction: column;
+  display: block;
   color: var(--white-color);
-  font-weight: 500;
-  row-gap: 16px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  @media screen and (min-width: 1158px) {
+    text-align: left;
+  }
 }
 
 .footer-socmed-heading {
-  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  margin-bottom: 16px;
 }
 
 .footer-socmed-list {
-  display: inline-flex;
+  margin-top: 16px;
+  display: flex;
   flex-direction: row;
   column-gap: 16px;
   list-style: none;
@@ -776,24 +886,28 @@ textarea {
   fill: var(--cloud-color);
 }
 
-.footer-subs {
-  display: flex;
-  flex-direction: column;
-}
-
 .subs {
   display: flex;
-  flex-direction: column;
-  row-gap: 16px;
+  flex-direction: row;
 }
 
 .subs-heading {
-  text-align: center;
   color: white;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.32px;
+  display: block;
+  text-align: center;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1158px) {
+    text-align: left;
+  }
 }
 
 .subs-content {
@@ -801,12 +915,26 @@ textarea {
   flex-direction: column;
   align-items: center;
   row-gap: 16px;
-  /* column-gap: 24px; */
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    margin-right: 50px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 24px;
+  }
 }
 
 .subs-input {
+  margin-top: 16px;
   padding-left: 16px;
-  width: 398px;
+  width: 264px;
   height: 40px;
   border-radius: 4px;
   border: 0;
@@ -816,6 +944,16 @@ textarea {
   color: var(--white-color);
   opacity: 0.3;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    width: 264px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    text-align: left;
+    width: 264px;
+  }
 }
 
 .subs-input[type="email"]::placeholder {
@@ -846,6 +984,14 @@ textarea {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+
+  @media screen and (min-width: 768px) {
+    align-self: flex-end;
+  }
+
+  @media screen and (min-width: 1158px) {
+    align-self: flex-end;
+  }
 }
 
 .subs-button:hover {
