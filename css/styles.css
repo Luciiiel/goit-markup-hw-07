@@ -1,6 +1,7 @@
 :root {
   --black: #000;
   --white: #ffffff;
+  --white-opacity: rgba(255, 255, 255, 0.4);
   --cloud: #f4f4fd;
   --dairy: #fcfcfc;
   --cornflower: #e7e9fc;
@@ -119,24 +120,89 @@ li {
 }
 
 /* mobile menu */
-.mobile-menu {
+.mobile-button {
   cursor: pointer;
   border: none;
-  background-color: var(--white);
+  background-color: transparent;
   width: 32px;
   height: 22px;
   transition: var(--default-transition);
 }
 
-.mobile-menu:hover {
+.mobile-button:hover {
   fill: var(--ocean);
 }
 
-.mobile-menu__icon {
+.mobile-button__icon {
   width: 32px;
   height: 22px;
 }
 
+.mobile__button-close {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: var(--default-transition);
+  color: var(--navyblue-color);
+}
+
+.mobile__button-icon {
+  width: 8px;
+  height: 9px;
+  fill: var(--navyblue);
+}
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  gap: 284px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 80px 40px 40px 40px;
+  background-color: var(--white);
+  visibility: hidden;
+}
+
+.mobile.is-open {
+  visibility: visible;
+}
+
+.mobile__nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.mobile__nav-item {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+
+.mobile__address {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile__address-link {
+  color: var(--slate);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
 /* hero section */
 .hero {
   padding: 112px 0;
@@ -697,8 +763,7 @@ li {
   width: 100%;
   padding-left: 16px;
   border-radius: 4px;
-  border: 1px solid var(--white);
-  opacity: 0.3;
+  border: 1px solid var(--white-opacity);
   background-color: var(--navyblue);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: var(--default-transition);
@@ -828,9 +893,10 @@ li {
     color: var(--ocean);
   }
 
-  .mobile-menu {
+  .mobile-button {
     display: none;
   }
+
   /* hero section */
   .hero {
     padding: 112px 0;
