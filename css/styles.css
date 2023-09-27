@@ -933,6 +933,12 @@ li {
   /* hero section */
   .hero {
     padding: 188px 0;
+    background: var(--GREY, rgba(46, 47, 66, 0.7));
+    background-image: url(../images/dark-bg.png), url(../images/hero-img.jpg),
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   /* about section */
