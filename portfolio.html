@@ -34,11 +34,7 @@
               <a class="nav__link active" href="./portfolio">Portfolio</a>
             </li>
             <li class="nav__list-item">
-              <a
-                class="nav__link"
-                href="https://luciiifr.github.io/goit-markup-hw-07/"
-                >Contacts</a
-              >
+              <a class="nav__link" href="https://luciiifr.github.io/goit-markup-hw-07">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -56,12 +52,46 @@
             </li>
           </ul>
         </address>
-        <button class="mobile-menu">
-          <svg class="mobile-menu__icon">
-            <use href="./images/icons.svg#hamburger-menu-icon" />
+        <button class="mobile-button js-open-menu" type="button">
+          <svg class="mobile-button__icon">
+            <use href="./images/icons.svg#hamburger-menu-icon"/>
           </svg>
         </button>
-      </div>
+        <!-- mobile nav -->
+        <nav class="mobile js-menu-container">
+          <button class="mobile__button-close js-close-menu" type="button">
+            <svg class="mobile__button-icon">
+              <use href="./images/icons.svg#icon-close"/>
+            </svg>
+          </button>
+          <ul class="mobile__nav">
+            <li class="mobile__nav-item">
+              <a
+                class="mobile__nav-link active"
+                href="https://luciiifr.github.io/goit-markup-hw-07/"
+                >Studio</a
+              >
+            </li>
+            <li class="mobile__nav-item">
+              <a class="mobile__nav-link" href="./portfolio">Portfolio</a>
+            </li>
+            <li class="mobile__nav-item">
+              <a class="mobile__nav-link" href="https://luciiifr.github.io/goit-markup-hw-07">Contacts</a>
+            </li>
+          </ul>
+          <ul class="mobile__address">
+            <li class="mobile__address-item">
+              <a class="mobile__address-link" href="tel:110001111111">
+                +11 (000) 111-11-11
+              </a>
+            </li>
+            <li class="mobile__address-item">
+              <a class="mobile__address-link" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+        </nav>
     </header>
     <main>
       <!-- filter section -->
