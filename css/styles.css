@@ -166,7 +166,7 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 80px 20px 40px 40px;
+  padding: 80px 30px 40px 40px;
   background-color: var(--white);
 
   transform: translateX(100%);
@@ -209,7 +209,7 @@ li {
   gap: 40px;
 }
 
-.mobile__address-link {
+.mobile__address-item {
   color: var(--slate);
   font-size: 20px;
   font-weight: 500;
@@ -218,19 +218,23 @@ li {
   transition: var(--default-transition);
 }
 
-.mobile__address-link:hover {
+.mobile__address-tel {
   color: var(--iris);
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.72px;
 }
+
+.mobile__address-email:hover {
+  color: var(--iris);
+}
 /* mobile social media links */
 .mobile-socmed {
   margin-top: 48px;
   display: flex;
   flex-direction: row;
-  column-gap: 56px;
+  justify-content: space-between;
 }
 
 .mobile-socmed__item {
@@ -328,8 +332,8 @@ li {
 .modal {
   transform: none;
   transition: var(--default-transition);
-  width: 408px;
-  height: 584px;
+  width: auto;
+  height: auto;
   position: absolute;
   border-radius: 4px;
   background: var(--dairy);
