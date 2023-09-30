@@ -186,7 +186,6 @@ li {
 
 /* mobile navigation */
 .mobile__nav {
-  margin-bottom: 284px;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
